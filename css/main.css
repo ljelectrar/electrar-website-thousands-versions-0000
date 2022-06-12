@@ -1,0 +1,427 @@
+/* SETUP VARIABLES FONTS */
+/*
+    /* fonts sans-serif
+*/
+/* Red Hat Display */
+@font-face {
+  font-family: 'Red Hat Display', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0..1,300..900') format('woff2 supports variations'),
+          url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0..1,300..900') format('woff2-variations');
+  font-weight: 300 900;
+  font-style: 0 1;
+}
+
+/* colors black & white */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-cream: #efdab9;
+  --color-gray-dark: #202124;
+  --color-gray: #3A3632;
+  --color-gray-brains: #27282c;
+  --color-gray-atom: #343233;
+  --color-gray-light: #f4f4f4;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-600: #9E9E9E;
+  --color-gray-800: #616161;
+  --color-gray-900: #424242;
+}
+
+/* Color shadows */
+:root {
+  --color-shadow-black-15: rgba(0, 0, 0, 0.15);
+  --color-shadow-black-30: rgba(0, 0, 0, 0.30);
+  --color-shadow-black-60: rgba(0, 0, 0, 0.60);
+  --color-shadow-black-75: rgba(0, 0, 0, 0.75);
+  --color-shadow-black-90: rgba(0, 0, 0, 0.90);
+  --color-shadow-black-95: rgba(0, 0, 0, 0.95);
+  --color-shadow-white-15: rgba(255, 255, 255, 0.15);
+  --color-shadow-white-30: rgba(255, 255, 255, 0.30);
+  --color-shadow-white-60: rgba(255, 255, 255, 0.60);
+  --color-shadow-white-75: rgba(255, 255, 255, 0.75);
+  --color-shadow-white-90: rgba(255, 255, 255, 0.90);
+  --color-shadow-white-95: rgba(255, 255, 255, 0.95);
+}
+
+/* Branding colors */
+:root {
+  /* magenta group */
+  --color-magenta: #ff09f5;
+  --color-middle-magenta: #bc0350;
+  --color-main-magenta: #bc0350;
+  --color-dark-magenta: #2b0013;
+  /* blue group */
+  --color-indigo: #0d1623;
+  --color-dark-blue: #220055;
+  --color-middle-blue: #442178;
+  --color-light-blue: #8d5fd3;
+  /* Green Group */
+  --color-green-light-01: #e8fff7;
+  --color-green-light-02: #b9ffe8;
+  --color-green-light-03: #9affde;
+  --color-green-middle-01: #00e59b;
+  --color-green-middle-02: #00c787;
+  --color-green-middle-03: #009f6c;
+  --color-green-dark-01: #006646;
+  --color-green-dark-02: #004c34;
+  --color-green-dark-03: #002e1f;
+  --color-green-gray: #475c4d;
+  /* Red Group */
+  --color-light-red: #ff4b4b;
+  --color-red: #ff0000;
+  --color-main-red: #e52421;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  letter-spacing: .1em;
+  font-weight: 400;
+  width: 100%;
+}
+
+body {
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: var(--color-gray);
+}
+
+a, li, ul
+{
+  color: inherit;
+  text-decoration: none;
+}
+
+b {
+  font-weight: 800;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas,
+caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption,
+figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label,
+legend, li, main, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span,
+strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: initial;
+  color: inherit;
+  list-style-type: none !important;
+}
+
+h1, h2, h3, h4, h5, h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 6em;
+}
+
+h2 {
+  font-size: 5em;
+}
+
+h3 {
+  font-size: 4em;
+}
+
+h4 {
+  font-size: 3em;
+}
+
+h5 {
+  font-size: 2em;
+}
+
+h6 {
+  font-size: 1.5em;
+}
+
+p {
+  line-height: 1.6em;
+  font-size: 1.4em;
+}
+
+i {
+  font-style: italic;
+}
+
+b {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.electrar-layout {
+  color: var(--color-gray-dark);
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+main, footer {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100000 !important;
+  padding: 0;
+  background-color: var(--color-gray-light);
+  height: 9vh;
+  box-shadow: 1px 1px 4px 0px var(--color-shadow-black-90);
+}
+
+#logotype {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  margin-bottom: 1em;
+  margin-right: 3%;
+}
+
+#logotype img {
+  margin-top: 4em;
+  height: 12vh;
+  image-resolution: from-image;
+  image-resolution: 300dpi;
+  image-resolution: from-image 300dpi;
+  image-resolution: 300dpi snap;
+}
+
+.navigation {
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  transition: all .2s ease;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  padding-top: 7em;
+  height: 100vh;
+  width: 180px;
+  background-color: var(--color-gray-light);
+  box-shadow: 1px 1px 1px 1px var(--color-green-gray);
+  color: var(--color-cream);
+}
+
+.prof-section {
+  text-align: center;
+}
+
+.prof-section img {
+  width: 127px;
+}
+
+#caricature-01 {
+  width: 64px;
+}
+
+#BitBruxo {
+  width: 78px;
+  text-align: center;
+}
+
+.navigation ul {
+  margin: .5em 0;
+  margin-left: 1em;
+  text-align: left;
+}
+
+.navigation ul li {
+  font-size: 1.05em;
+  font-weight: 500;
+  padding: .2em 0em;
+  margin: .2em 0;
+  color: var(--color-gray);
+}
+
+.navigation small {
+  color: var(--color-magenta);
+}
+
+.social-icon {
+  padding: 0 .4em !important;
+}
+
+.social-icon:first-child {
+  padding-left: 0 !important; 
+}
+
+.social-media div {
+  padding-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.social-media img {
+  width: 27px;
+  background-color: var(--color-magenta);
+  border-radius: 100%;
+}
+
+#nav:checked + .nav-btn {
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+
+#nav:checked + .nav-btn i {
+  background-color: var(--color-magenta);
+  transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+  transform: translateY(16px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+  opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+  transform: translateY(-12px) rotate(90deg);
+}
+
+#nav:checked ~ .navigation {
+  z-index: 9990;
+  opacity: 1;
+}
+
+#nav:checked ~ .navigation ul li a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-btn {
+  background-color: var(--color-magenta);
+  position: fixed;
+  padding: 9px;
+  left: 3em;
+  top: 1em;
+  display: block;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 9999;
+  border-radius: 9px;
+}
+
+.nav-btn i:nth-child(1) {
+  margin-top: 0px;
+}
+
+.nav-btn i {
+  display: block;
+  height: 6px;
+  margin-top: 9px;
+  background-color: var(--color-green-gray);
+  border-radius: 2px;
+}
+
+main {
+  min-height: 100vh;
+  margin-top: 9vh;
+  color: var(--color-cream);
+  background-color: var(--color-white);
+}
+
+.mission {
+  padding: .2em 0;
+  background-color: var(--color-magenta);
+}
+
+#text {
+  color: var(--color-gray-light);
+  text-align: center;
+  font-size: 1.36em;
+  font-weight: 400;
+}
+
+/* footer styles  */
+footer {
+  width: 100%;
+  min-height: 16vh;
+  background-color: var(--color-gray-light);
+  color: var(--color-gray);
+}
+
+.contact-info-footer {
+  padding: 2em 1em;
+  display: flex;
+  background-color: var(--color-gray-300);
+  justify-content: space-between;
+}
+
+.contact-info-footer div {
+  width: 50%;
+  height: 9vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 500;
+  text-align: left;
+}
+
+.info-phone p {
+  margin-top: .36em;
+  font-size: 1.36em;
+}
+
+.info-phone-btn {
+  padding: .3em .7em;
+  color: var(--color-white);
+  background-color: var(--color-magenta);
+  font-size: 1.67em;
+  font-weight: 800;
+  border-radius: .2em;
+  box-shadow: 2px 2px 2px var(--color-gray-dark);
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0em 0;
+  padding: .5em 3em;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+footer ul li {
+  color: var(--color-magenta);
+  text-align: center;
+  width: 32em;
+}
+
+footer ul li img {
+  width: 56px;
+}
+
+/* end of styles */
+
